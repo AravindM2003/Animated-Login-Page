@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  overflow: hidden;
+}
+
+/*Animated Background Effect*/
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #4a8ef4;
+    overflow: hidden;
+  }
+  section .air{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+    background-size: 1000px 100px;
+  }
+  section .air.air1{
+    animation: wave2 30s linear infinite;
+    z-index: 10;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  section .air.air2{
+    animation: wave 20s linear infinite;
+    z-index: 10;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  section .air.air3{
+    animation: wave2 10s linear infinite;
+    z-index: 10;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+  section .air.air4{
+    animation: wave 5s linear infinite;
+    z-index: 10;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+
+
+.container{
+  max-width: 450px;
+  padding: 0 20px;
+  margin: 170px auto;
+  
+}
+
+/*Shacking Effect*/
+
+.container:hover{
+    -webkit-animation: shake .1s ease-in-out .1s infinite alternate;
+    
+}
+
+@-webkit-keyframes shake{
+    from{
+        -webkit-transform: rotate(0.5deg);
+    }
+    to{
+        -webkit-transform: rotate(-0.5deg);
+        -webkit-transform-origin: center center;
+    }
+}
+
+/*Login Form Effect*/
+
+.inner-parts{
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+}
+.inner-parts .title{
+  height: 90px;
+  background: #3376daec;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner-parts form{
+  padding: 30px 25px 25px 30px;
+}
+.inner-parts form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.inner-parts form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px gray
+}
+form .row input:focus{
+  border-color:#4a8ef4;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.inner-parts form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background:#4a8ef4;
+  border: 1px solid#4a8ef4;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px gray
+}
+.inner-parts form .forgot{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.inner-parts form .forgot a{
+  color:#4a8ef4;
+  font-size: 17px;
+  text-decoration: none;
+}
+.inner-parts form .forgot a:hover{
+  text-decoration: underline;
+}
+.inner-parts form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background:#4a8ef4;
+  border: 1px solid#4a8ef4;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #4a8ef4;
+}
+.inner-parts form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.inner-parts form .signup-link a{
+  color:#4a8ef4;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+@keyframes wave{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: 1000px; 
+    }
+  }
+  @keyframes wave2{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: -1000px; 
+    }
+  }
